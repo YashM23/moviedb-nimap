@@ -1,0 +1,42 @@
+import { useEffect, useState } from "react";
+import MovieDetails from "../components/MovieDetails";
+import Pagination from "../components/Pagination";
+
+// API KEY OF THE DB
+const API_KEY = "c45a857c193f6302f2b5061c3b85e743";
+
+
+const TopRatedPage = () => {
+  const [movies, setMovies] = useState([]);
+  const [page,setPage] = useState(1);
+
+
+  useEffect(() => {
+    fetch(
+      ` https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=${page}`
+    )
+      .then((response) => response.json())
+      .then((data) => setMovies([data.results]));
+  }, [page]);
+
+  if (movies.length == 0) {
+    return (
+      <>
+        <div className="bg-black flex justify-center items-center h-screen">
+          Loading...
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <div className="py-24 md:py-28 px-10 h-full text-white bg-black flex flex-col justify-center items-center">
+        <MovieDetails movie={movies} />
+
+
+        <Pagination page={page} setPage={setPage} />
+      </div>
+  );
+};
+
+export default TopRatedPage;
