@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieCast from "../components/MovieCast";
 import { MOVIE_APi_KEY } from "../Variables";
+import MovieCrew from "../components/MovieCrew";
 
 // API KEY OF THE DB
 const API_KEY = MOVIE_APi_KEY;
@@ -40,7 +41,7 @@ const SingleMoviePage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-black">
-      <div className="mt-20 md:mt-16 lg:m-20 p-8 bg-blue-800/50 relative md:rounded-lg shadow-2xl">
+      <div className="mt-20 md:mt-16 lg:m-20 p-8 hover:bg-white/5 duration-1000 relative md:rounded-lg shadow-lg shadow-white border border-neutral-800">
         {/* PHOTO DIV */}
         <div className="flex gap-4">
           {/* PHOTO */}
@@ -56,11 +57,11 @@ const SingleMoviePage = () => {
             <h1 className="text-neutral-300 font-bold text-3xl md:text-4xl md:max-w-md">
               {movie.title}
             </h1>
-            <p className="text-blue-600 font-semibold text-base md:text-2xl">
+            <p className="text-blue-400 font-semibold text-base md:text-2xl">
               Rating : {movie.vote_average}
             </p>
             <div className="mt-2 flex justify-start items-center gap-4 text-neutral-300">
-              <p className=" p-1 border border-neutral-300 w-fit text-sm sm:text-base">
+              <p className="p-1 border border-neutral-300 w-fit text-sm sm:text-base">
                 {movie.runtime} mins
               </p>
               {/* {movie.genres.map((gen, i) => (
@@ -89,7 +90,11 @@ const SingleMoviePage = () => {
         </div>
       </div>
 
+      {/* CAST DETAILS */}
       <MovieCast id={id} apiKey={API_KEY} />
+
+      {/* CREW DETAILS */}
+      <MovieCrew id={id} apiKey={API_KEY}/>
     </div>
   );
 };

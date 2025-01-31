@@ -11,11 +11,13 @@ const MovieDetails = ({ movie }) => {
           //   console.log(mov)
 
           const { id, title, poster_path, vote_average } = mov;
+
+
           return (
             <Link
               to={`/movie/${id}`}
               key={index}
-              className="text-white hover:bg-gray-500/20 rounded-md duration-300 p-4 flex flex-col items-center hover:cursor-pointer hover:shadow-2xl border hover:border-gray-500"
+              className="text-white hover:bg-white/5 rounded-md duration-300 p-4 flex flex-col items-center hover:cursor-pointer hover:shadow-2xl border border-neutral-800"
             >
               {/* <h1>{id}</h1> */}
               <img

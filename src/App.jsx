@@ -6,6 +6,7 @@ import TopRatedPage from "./pages/TopRatedPage";
 import SingleMoviePage from "./pages/SingleMoviePage";
 import Searched from "./pages/Searched";
 import Footer from "./components/Footer";
+import PrivacyPage from "./pages/PrivacyPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/top-rated" element={<TopRatedPage />} />
           <Route path="/movie/:id" element={<SingleMoviePage />} />
           <Route path="/search/:query" element={<Searched />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
 
         <Footer />

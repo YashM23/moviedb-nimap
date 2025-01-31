@@ -36,6 +36,11 @@ const Homepage = () => {
   return (
     <>
       <div className="py-24 md:py-28 px-10 h-full text-white bg-black flex flex-col justify-center items-center">
+        
+        <div className="mb-4 -mt-5 md:-mt-5">
+          <h2 className="text-2xl md:text-4xl">Home</h2>
+        </div>
+        
         <MovieDetails movie={movies} />
 
         <Pagination page={page} setPage={setPage} />

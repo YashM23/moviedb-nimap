@@ -1,18 +1,9 @@
 /* eslint-disable react/prop-types */
 const MovieCastCard = ({ cast }) => {
-  // console.log(cast);
-
-  // if(cast.length == 0){
-
-  //   return(
-  //     <div className="bg-black h-fit text-white">
-  //       <p className="">No data Found</p>
-  //     </div>
-  //   )
-  // }
+  
   return (
     <>
-      <div className="text-neutral-300 flex overflow-x-scroll scrollbar-hidden py-2 md:py-5 md:px-4 mb-10 md:border border-neutral-900 mt-4 ">
+      <div className="text-neutral-300 flex overflow-x-scroll scrollbar-hidden py-2 md:py-5 md:px-4 mb-10 md:border border-neutral-900 mt-4  ">
         {cast?.length !== 0 ? (
           <>
             {cast?.map((c, i) => (

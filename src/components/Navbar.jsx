@@ -35,16 +35,17 @@ const Navbar = () => {
               onChange={(e) => {
                 setSearchQuery(e.target.value);
               }}
-              className="text-gray-900 ml-10 px-1 py-1 rounded-sm placeholder:text-center outline-none"
+              className="text-neutral-300 px-4 py-1 rounded-full placeholder:text-center placeholder:text-neutral-500 outline-none border border-neutral-600  bg-transparent "
               placeholder="Search Movie..."
             />
             <Link
-              className="bg-blue-500 text-white px-2 py-1 rounded-sm"
+              className="bg-blue-500 text-white px-2 py-1 rounded-full"
               to={
                 searchQuery.length > 0
                   ? `/search/${searchQuery.toLowerCase()}`
                   : "/"
               }
+              onClick={()=>{setSearchQuery("")}}
             >
               Search
             </Link>

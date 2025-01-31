@@ -9,10 +9,9 @@ import { MOVIE_APi_KEY } from "../Variables";
 // API KEY OF THE DB
 const API_KEY = MOVIE_APi_KEY;
 
-
 const Searched = () => {
   const [data, setData] = useState([]);
-  const [page,setPage] = useState(1);
+  const [page, setPage] = useState(1);
 
   const { query } = useParams();
 
@@ -29,13 +28,15 @@ const Searched = () => {
     };
 
     fetchdata();
-  }, [query,page]);
+  }, [query, page]);
 
   if (data.length == 0) {
     return (
       <>
         <div className="bg-black h-screen flex justify-center items-center">
-          <h1 className="text-2xl md:text-4xl text-neutral-300">No Such Movies</h1>
+          <h1 className="text-2xl md:text-4xl text-neutral-300">
+            No Such Movies
+          </h1>
         </div>
       </>
     );
@@ -43,10 +44,13 @@ const Searched = () => {
 
   return (
     <div className="py-24 md:py-28 px-10 min-h-screen text-white bg-black flex flex-col justify-center items-center">
+      <div className="mb-4 -mt-5 md:-mt-5">
+        <h2 className="text-2xl md:text-4xl">Search</h2>
+      </div>
+
       <SearchedMovieDetails movie={data} />
 
       <Pagination page={page} setPage={setPage} />
-
     </div>
   );
 };

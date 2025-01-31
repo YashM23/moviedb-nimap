@@ -10,10 +10,10 @@ const Footer = () => {
 
       <div className="w-2/3 h-full flex justify-start items-center gap-20">
         <div className="text-neutral-200 flex flex-col gap-1">
-          <p className="hover:text-yellow-300 duration-300 cursor-pointer">About</p>
-          <p className="hover:text-yellow-300 duration-300 cursor-pointer">Privacy</p>
-          <p className="hover:text-yellow-300 duration-300 cursor-pointer">Terms & Conditions</p>
-          <p className="hover:text-yellow-300 duration-300 cursor-pointer">Home</p>
+          <Link to="/about" className="hover:text-yellow-300 duration-300 cursor-pointer">About</Link>
+          <Link to="/privacy" className="hover:text-yellow-300 duration-300 cursor-pointer">Privacy</Link>
+          <Link to="/terms-conditions" className="hover:text-yellow-300 duration-300 cursor-pointer">Terms & Conditions</Link>
+          <Link to="/" className="hover:text-yellow-300 duration-300 cursor-pointer">Home</Link>
         </div>
 
         <div className="text-neutral-200 flex flex-col gap-1">
