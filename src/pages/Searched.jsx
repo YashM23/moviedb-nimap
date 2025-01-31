@@ -4,9 +4,11 @@ import { useParams } from "react-router-dom";
 // import MovieDetails from "../components/MovieDetails";
 import SearchedMovieDetails from "../components/SearchedMovieDetails";
 import Pagination from "../components/Pagination";
+import { MOVIE_APi_KEY } from "../Variables";
 
 // API KEY OF THE DB
-const API_KEY = "c45a857c193f6302f2b5061c3b85e743";
+const API_KEY = MOVIE_APi_KEY;
+
 
 const Searched = () => {
   const [data, setData] = useState([]);

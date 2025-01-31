@@ -5,7 +5,7 @@ import UpcomingMoviePage from "./pages/UpcomingMoviePage";
 import TopRatedPage from "./pages/TopRatedPage";
 import SingleMoviePage from "./pages/SingleMoviePage";
 import Searched from "./pages/Searched";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/search/:query" element={<Searched />} />
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );

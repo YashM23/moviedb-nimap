@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import MovieCast from "../components/MovieCast";
+import { MOVIE_APi_KEY } from "../Variables";
 
 // API KEY OF THE DB
-const API_KEY = "c45a857c193f6302f2b5061c3b85e743";
+const API_KEY = MOVIE_APi_KEY;
 // const API = import.meta.env.MOVIE_API_KEY;
 
 // console.log(API);

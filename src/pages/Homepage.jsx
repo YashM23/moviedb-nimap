@@ -2,11 +2,12 @@ import { useEffect } from "react";
 import { useState } from "react";
 import MovieDetails from "../components/MovieDetails";
 import Pagination from "../components/Pagination";
+import { MOVIE_APi_KEY } from "../Variables";
 
 // API KEY OF THE DB
-const API_KEY = "c45a857c193f6302f2b5061c3b85e743";
-const apiKey = import.meta.env.MOVIE_API_KEY;
-console.log(apiKey);
+const API_KEY = MOVIE_APi_KEY;
+// const apiKey = import.meta.env.MOVIE_API_KEY;
+// console.log(apiKey);
 
 const Homepage = () => {
   const [movies, setMovies] = useState([]);
